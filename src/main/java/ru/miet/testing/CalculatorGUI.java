@@ -2,7 +2,6 @@ package ru.miet.testing;
 
 import javax.swing.*;
 import java.awt.*;
-import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 
 public class CalculatorGUI implements CalculatorView {
@@ -11,6 +10,12 @@ public class CalculatorGUI implements CalculatorView {
     private JTextField secondNumberField;
     private JTextField resultField;
     private JLabel errorLabel;
+    
+    // Явное хранение ссылок на кнопки для упрощения тестирования
+    private JButton plusButton;
+    private JButton minusButton;
+    private JButton multiplyButton;
+    private JButton divideButton;
 
     public CalculatorGUI() {
         createGUI();
@@ -32,10 +37,10 @@ public class CalculatorGUI implements CalculatorView {
         frame.add(secondNumberField);
 
         // Buttons
-        JButton plusButton = new JButton("+");
-        JButton minusButton = new JButton("-");
-        JButton multiplyButton = new JButton("*");
-        JButton divideButton = new JButton("/");
+        plusButton = new JButton("+");
+        minusButton = new JButton("-");
+        multiplyButton = new JButton("*");
+        divideButton = new JButton("/");
 
         // Добавляем кнопки в отдельную панель для лучшего расположения
         JPanel buttonPanel = new JPanel(new GridLayout(1, 4, 5, 5));
@@ -58,23 +63,6 @@ public class CalculatorGUI implements CalculatorView {
         errorLabel.setForeground(Color.RED);
         frame.add(errorLabel);
         frame.add(new JLabel()); // Пустая ячейка для выравнивания
-
-        // Добавляем слушателей для кнопок
-        plusButton.addActionListener(e -> {
-            // Presenter будет установлен извне
-        });
-        
-        minusButton.addActionListener(e -> {
-            // Presenter будет установлен извне
-        });
-        
-        multiplyButton.addActionListener(e -> {
-            // Presenter будет установлен извне
-        });
-        
-        divideButton.addActionListener(e -> {
-            // Presenter будет установлен извне
-        });
     }
 
     @Override
@@ -99,62 +87,46 @@ public class CalculatorGUI implements CalculatorView {
         return secondNumberField.getText().trim();
     }
 
+    // Упрощенные методы установки слушателей
     public void setPlusButtonListener(ActionListener listener) {
-        // Находим кнопку "+" и устанавливаем слушатель
-        Component[] components = frame.getContentPane().getComponents();
-        for (Component comp : components) {
-            if (comp instanceof JPanel) {
-                Component[] panelComps = ((JPanel) comp).getComponents();
-                for (Component panelComp : panelComps) {
-                    if (panelComp instanceof JButton && ((JButton) panelComp).getText().equals("+")) {
-                        ((JButton) panelComp).addActionListener(listener);
-                    }
-                }
-            }
-        }
+        plusButton.addActionListener(listener);
     }
 
     public void setMinusButtonListener(ActionListener listener) {
-        // Аналогично для других кнопок
-        Component[] components = frame.getContentPane().getComponents();
-        for (Component comp : components) {
-            if (comp instanceof JPanel) {
-                Component[] panelComps = ((JPanel) comp).getComponents();
-                for (Component panelComp : panelComps) {
-                    if (panelComp instanceof JButton && ((JButton) panelComp).getText().equals("-")) {
-                        ((JButton) panelComp).addActionListener(listener);
-                    }
-                }
-            }
-        }
+        minusButton.addActionListener(listener);
     }
 
     public void setMultiplyButtonListener(ActionListener listener) {
-        Component[] components = frame.getContentPane().getComponents();
-        for (Component comp : components) {
-            if (comp instanceof JPanel) {
-                Component[] panelComps = ((JPanel) comp).getComponents();
-                for (Component panelComp : panelComps) {
-                    if (panelComp instanceof JButton && ((JButton) panelComp).getText().equals("*")) {
-                        ((JButton) panelComp).addActionListener(listener);
-                    }
-                }
-            }
-        }
+        multiplyButton.addActionListener(listener);
     }
 
     public void setDivideButtonListener(ActionListener listener) {
-        Component[] components = frame.getContentPane().getComponents();
-        for (Component comp : components) {
-            if (comp instanceof JPanel) {
-                Component[] panelComps = ((JPanel) comp).getComponents();
-                for (Component panelComp : panelComps) {
-                    if (panelComp instanceof JButton && ((JButton) panelComp).getText().equals("/")) {
-                        ((JButton) panelComp).addActionListener(listener);
-                    }
-                }
-            }
-        }
+        divideButton.addActionListener(listener);
+    }
+
+    // Геттеры для тестирования
+    public JButton getPlusButton() {
+        return plusButton;
+    }
+
+    public JButton getMinusButton() {
+        return minusButton;
+    }
+
+    public JButton getMultiplyButton() {
+        return multiplyButton;
+    }
+
+    public JButton getDivideButton() {
+        return divideButton;
+    }
+
+    public JTextField getResultField() {
+        return resultField;
+    }
+
+    public JLabel getErrorLabel() {
+        return errorLabel;
     }
 
     public void show() {

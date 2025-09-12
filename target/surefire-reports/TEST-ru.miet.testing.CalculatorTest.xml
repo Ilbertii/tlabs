@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="ru.miet.testing.CalculatorTest" time="0.056" tests="21" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="ru.miet.testing.CalculatorTest" time="0.045" tests="21" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
@@ -12,7 +12,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="RU"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-21-openjdk/lib"/>
-    <property name="sun.java.command" value="/home/mrrobot/Загрузки/test/tlabs/target/surefire/surefirebooter-20250911143313320_3.jar /home/mrrobot/Загрузки/test/tlabs/target/surefire 2025-09-11T14-33-13_276-jvmRun1 surefire-20250911143313320_1tmp surefire_0-20250911143313320_2tmp"/>
+    <property name="sun.java.command" value="/home/mrrobot/Загрузки/test/tlabs/target/surefire/surefirebooter-20250912140719397_3.jar /home/mrrobot/Загрузки/test/tlabs/target/surefire 2025-09-12T14-07-19_355-jvmRun1 surefire-20250912140719397_1tmp surefire_0-20250912140719397_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/home/mrrobot/Загрузки/test/tlabs/target/test-classes:/home/mrrobot/Загрузки/test/tlabs/target/classes:/home/mrrobot/.m2/repository/org/junit/jupiter/junit-jupiter/5.9.3/junit-jupiter-5.9.3.jar:/home/mrrobot/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.3/junit-jupiter-api-5.9.3.jar:/home/mrrobot/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/mrrobot/.m2/repository/org/junit/platform/junit-platform-commons/1.9.3/junit-platform-commons-1.9.3.jar:/home/mrrobot/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/mrrobot/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.9.3/junit-jupiter-params-5.9.3.jar:/home/mrrobot/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.3/junit-jupiter-engine-5.9.3.jar:/home/mrrobot/.m2/repository/org/junit/platform/junit-platform-engine/1.9.3/junit-platform-engine-1.9.3.jar:/home/mrrobot/.m2/repository/org/mockito/mockito-core/5.3.1/mockito-core-5.3.1.jar:/home/mrrobot/.m2/repository/net/bytebuddy/byte-buddy/1.14.4/byte-buddy-1.14.4.jar:/home/mrrobot/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.4/byte-buddy-agent-1.14.4.jar:/home/mrrobot/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/home/mrrobot/.m2/repository/org/mockito/mockito-junit-jupiter/5.3.1/mockito-junit-jupiter-5.3.1.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -27,7 +27,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="surefire.real.class.path" value="/home/mrrobot/Загрузки/test/tlabs/target/surefire/surefirebooter-20250911143313320_3.jar"/>
+    <property name="surefire.real.class.path" value="/home/mrrobot/Загрузки/test/tlabs/target/surefire/surefirebooter-20250912140719397_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.7+6"/>
     <property name="user.name" value="mrrobot"/>
@@ -54,25 +54,25 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testMultiplyPositiveNumbers" classname="ru.miet.testing.CalculatorTest" time="0.025"/>
-  <testcase name="testMultiplyNegativeNumbers" classname="ru.miet.testing.CalculatorTest" time="0.001"/>
+  <testcase name="testMultiplyPositiveNumbers" classname="ru.miet.testing.CalculatorTest" time="0.018"/>
+  <testcase name="testMultiplyNegativeNumbers" classname="ru.miet.testing.CalculatorTest" time="0.0"/>
   <testcase name="testDivideByZero" classname="ru.miet.testing.CalculatorTest" time="0.001"/>
-  <testcase name="testDivideZeroByNonZero" classname="ru.miet.testing.CalculatorTest" time="0.0"/>
+  <testcase name="testDivideZeroByNonZero" classname="ru.miet.testing.CalculatorTest" time="0.001"/>
   <testcase name="testDivideExactlyAtThreshold" classname="ru.miet.testing.CalculatorTest" time="0.001"/>
   <testcase name="testDivideMixedSigns" classname="ru.miet.testing.CalculatorTest" time="0.001"/>
   <testcase name="testSumMixedNumbers" classname="ru.miet.testing.CalculatorTest" time="0.0"/>
-  <testcase name="testDivideByVerySmallNumberBelowThreshold" classname="ru.miet.testing.CalculatorTest" time="0.0"/>
-  <testcase name="testSumPositiveNumbers" classname="ru.miet.testing.CalculatorTest" time="0.0"/>
-  <testcase name="testSumNegativeNumbers" classname="ru.miet.testing.CalculatorTest" time="0.0"/>
-  <testcase name="testSubtractSameNumbers" classname="ru.miet.testing.CalculatorTest" time="0.001"/>
+  <testcase name="testDivideByVerySmallNumberBelowThreshold" classname="ru.miet.testing.CalculatorTest" time="0.001"/>
+  <testcase name="testSumPositiveNumbers" classname="ru.miet.testing.CalculatorTest" time="0.001"/>
+  <testcase name="testSumNegativeNumbers" classname="ru.miet.testing.CalculatorTest" time="0.001"/>
+  <testcase name="testSubtractSameNumbers" classname="ru.miet.testing.CalculatorTest" time="0.0"/>
   <testcase name="testDividePositiveNumbers" classname="ru.miet.testing.CalculatorTest" time="0.0"/>
-  <testcase name="testDivideNegativeNumbers" classname="ru.miet.testing.CalculatorTest" time="0.0"/>
-  <testcase name="testMultiplyMixedSigns" classname="ru.miet.testing.CalculatorTest" time="0.0"/>
+  <testcase name="testDivideNegativeNumbers" classname="ru.miet.testing.CalculatorTest" time="0.001"/>
+  <testcase name="testMultiplyMixedSigns" classname="ru.miet.testing.CalculatorTest" time="0.001"/>
   <testcase name="testDivideBySmallNumberAboveThreshold" classname="ru.miet.testing.CalculatorTest" time="0.001"/>
-  <testcase name="testSubtractPositiveNumbers" classname="ru.miet.testing.CalculatorTest" time="0.0"/>
+  <testcase name="testSubtractPositiveNumbers" classname="ru.miet.testing.CalculatorTest" time="0.001"/>
   <testcase name="testSumWithZero" classname="ru.miet.testing.CalculatorTest" time="0.0"/>
   <testcase name="testSubtractNegativeNumbers" classname="ru.miet.testing.CalculatorTest" time="0.0"/>
   <testcase name="testSubtractNegativeResult" classname="ru.miet.testing.CalculatorTest" time="0.0"/>
-  <testcase name="testDivideFractionalResult" classname="ru.miet.testing.CalculatorTest" time="0.0"/>
-  <testcase name="testMultiplyWithZero" classname="ru.miet.testing.CalculatorTest" time="0.001"/>
+  <testcase name="testDivideFractionalResult" classname="ru.miet.testing.CalculatorTest" time="0.001"/>
+  <testcase name="testMultiplyWithZero" classname="ru.miet.testing.CalculatorTest" time="0.0"/>
 </testsuite>

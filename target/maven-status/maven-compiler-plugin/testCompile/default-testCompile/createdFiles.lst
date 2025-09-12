@@ -1,2 +1,4 @@
 ru/miet/testing/CalculatorTest.class
+ru/miet/testing/CalculatorGUITest$ActionListenerMock.class
 ru/miet/testing/CalculatorPresenterTest.class
+ru/miet/testing/CalculatorGUITest.class

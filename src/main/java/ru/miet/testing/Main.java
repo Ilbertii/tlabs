@@ -1,43 +1,22 @@
 package ru.miet.testing;
 
-import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
+import javax.swing.*;
 
 public class Main {
     public static void main(String[] args) {
-        javax.swing.SwingUtilities.invokeLater(() -> {
+        // Запускаем в EDT (Event Dispatch Thread) как того требуют правила Swing
+        SwingUtilities.invokeLater(() -> {
+            // Создаем view и presenter
             CalculatorGUI view = new CalculatorGUI();
             CalculatorPresenter presenter = new CalculatorPresenterImpl(view);
             
-            // Устанавливаем слушатели для кнопок
-            view.setPlusButtonListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    presenter.onPlusClicked();
-                }
-            });
+            // Устанавливаем связь между view и presenter
+            view.setPlusButtonListener(e -> presenter.onPlusClicked());
+            view.setMinusButtonListener(e -> presenter.onMinusClicked());
+            view.setMultiplyButtonListener(e -> presenter.onMultiplyClicked());
+            view.setDivideButtonListener(e -> presenter.onDivideClicked());
             
-            view.setMinusButtonListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    presenter.onMinusClicked();
-                }
-            });
-            
-            view.setMultiplyButtonListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    presenter.onMultiplyClicked();
-                }
-            });
-            
-            view.setDivideButtonListener(new ActionListener() {
-                @Override
-                public void actionPerformed(ActionEvent e) {
-                    presenter.onDivideClicked();
-                }
-            });
-            
+            // Показываем интерфейс
             view.show();
         });
     }
