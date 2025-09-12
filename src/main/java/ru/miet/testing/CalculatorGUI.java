@@ -132,4 +132,11 @@ public class CalculatorGUI implements CalculatorView {
     public void show() {
         frame.setVisible(true);
     }
+    public JTextField getFirstNumberField() {
+    return firstNumberField;
+    }
+
+    public JTextField getSecondNumberField() {
+    return secondNumberField;
+    }
 }

@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="ru.miet.testing.CalculatorGUITest" time="0.489" tests="6" errors="0" skipped="0" failures="0">
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="ru.miet.testing.CalculatorGUITest" time="0.316" tests="6" errors="0" skipped="0" failures="0">
   <properties>
     <property name="java.specification.version" value="21"/>
     <property name="sun.jnu.encoding" value="UTF-8"/>
-    <property name="java.class.path" value="/home/mrrobot/Загрузки/test/tlabs/target/test-classes:/home/mrrobot/Загрузки/test/tlabs/target/classes:/home/mrrobot/.m2/repository/org/junit/jupiter/junit-jupiter/5.9.3/junit-jupiter-5.9.3.jar:/home/mrrobot/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.3/junit-jupiter-api-5.9.3.jar:/home/mrrobot/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/mrrobot/.m2/repository/org/junit/platform/junit-platform-commons/1.9.3/junit-platform-commons-1.9.3.jar:/home/mrrobot/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/mrrobot/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.9.3/junit-jupiter-params-5.9.3.jar:/home/mrrobot/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.3/junit-jupiter-engine-5.9.3.jar:/home/mrrobot/.m2/repository/org/junit/platform/junit-platform-engine/1.9.3/junit-platform-engine-1.9.3.jar:/home/mrrobot/.m2/repository/org/mockito/mockito-core/5.3.1/mockito-core-5.3.1.jar:/home/mrrobot/.m2/repository/net/bytebuddy/byte-buddy/1.14.4/byte-buddy-1.14.4.jar:/home/mrrobot/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.4/byte-buddy-agent-1.14.4.jar:/home/mrrobot/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/home/mrrobot/.m2/repository/org/mockito/mockito-junit-jupiter/5.3.1/mockito-junit-jupiter-5.3.1.jar:"/>
     <property name="sun.awt.enableExtraMouseButtons" value="true"/>
+    <property name="java.class.path" value="/home/mrrobot/Загрузки/test/tlabs/target/test-classes:/home/mrrobot/Загрузки/test/tlabs/target/classes:/home/mrrobot/.m2/repository/org/junit/jupiter/junit-jupiter/5.9.3/junit-jupiter-5.9.3.jar:/home/mrrobot/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.3/junit-jupiter-api-5.9.3.jar:/home/mrrobot/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/mrrobot/.m2/repository/org/junit/platform/junit-platform-commons/1.9.3/junit-platform-commons-1.9.3.jar:/home/mrrobot/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/mrrobot/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.9.3/junit-jupiter-params-5.9.3.jar:/home/mrrobot/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.3/junit-jupiter-engine-5.9.3.jar:/home/mrrobot/.m2/repository/org/junit/platform/junit-platform-engine/1.9.3/junit-platform-engine-1.9.3.jar:/home/mrrobot/.m2/repository/org/mockito/mockito-core/5.3.1/mockito-core-5.3.1.jar:/home/mrrobot/.m2/repository/net/bytebuddy/byte-buddy/1.14.4/byte-buddy-1.14.4.jar:/home/mrrobot/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.4/byte-buddy-agent-1.14.4.jar:/home/mrrobot/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/home/mrrobot/.m2/repository/org/mockito/mockito-junit-jupiter/5.3.1/mockito-junit-jupiter-5.3.1.jar:"/>
     <property name="java.vm.vendor" value="Red Hat, Inc."/>
     <property name="sun.arch.data.model" value="64"/>
     <property name="java.vendor.url" value="https://www.redhat.com/"/>
@@ -14,7 +14,7 @@
     <property name="sun.java.launcher" value="SUN_STANDARD"/>
     <property name="user.country" value="RU"/>
     <property name="sun.boot.library.path" value="/usr/lib/jvm/java-21-openjdk/lib"/>
-    <property name="sun.java.command" value="/home/mrrobot/Загрузки/test/tlabs/target/surefire/surefirebooter-20250912140719397_3.jar /home/mrrobot/Загрузки/test/tlabs/target/surefire 2025-09-12T14-07-19_355-jvmRun1 surefire-20250912140719397_1tmp surefire_0-20250912140719397_2tmp"/>
+    <property name="sun.java.command" value="/home/mrrobot/Загрузки/test/tlabs/target/surefire/surefirebooter-20250912141414864_3.jar /home/mrrobot/Загрузки/test/tlabs/target/surefire 2025-09-12T14-14-14_819-jvmRun1 surefire-20250912141414864_1tmp surefire_0-20250912141414864_2tmp"/>
     <property name="jdk.debug" value="release"/>
     <property name="surefire.test.class.path" value="/home/mrrobot/Загрузки/test/tlabs/target/test-classes:/home/mrrobot/Загрузки/test/tlabs/target/classes:/home/mrrobot/.m2/repository/org/junit/jupiter/junit-jupiter/5.9.3/junit-jupiter-5.9.3.jar:/home/mrrobot/.m2/repository/org/junit/jupiter/junit-jupiter-api/5.9.3/junit-jupiter-api-5.9.3.jar:/home/mrrobot/.m2/repository/org/opentest4j/opentest4j/1.2.0/opentest4j-1.2.0.jar:/home/mrrobot/.m2/repository/org/junit/platform/junit-platform-commons/1.9.3/junit-platform-commons-1.9.3.jar:/home/mrrobot/.m2/repository/org/apiguardian/apiguardian-api/1.1.2/apiguardian-api-1.1.2.jar:/home/mrrobot/.m2/repository/org/junit/jupiter/junit-jupiter-params/5.9.3/junit-jupiter-params-5.9.3.jar:/home/mrrobot/.m2/repository/org/junit/jupiter/junit-jupiter-engine/5.9.3/junit-jupiter-engine-5.9.3.jar:/home/mrrobot/.m2/repository/org/junit/platform/junit-platform-engine/1.9.3/junit-platform-engine-1.9.3.jar:/home/mrrobot/.m2/repository/org/mockito/mockito-core/5.3.1/mockito-core-5.3.1.jar:/home/mrrobot/.m2/repository/net/bytebuddy/byte-buddy/1.14.4/byte-buddy-1.14.4.jar:/home/mrrobot/.m2/repository/net/bytebuddy/byte-buddy-agent/1.14.4/byte-buddy-agent-1.14.4.jar:/home/mrrobot/.m2/repository/org/objenesis/objenesis/3.3/objenesis-3.3.jar:/home/mrrobot/.m2/repository/org/mockito/mockito-junit-jupiter/5.3.1/mockito-junit-jupiter-5.3.1.jar:"/>
     <property name="sun.cpu.endian" value="little"/>
@@ -29,7 +29,7 @@
     <property name="line.separator" value="&#10;"/>
     <property name="java.specification.name" value="Java Platform API Specification"/>
     <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
-    <property name="surefire.real.class.path" value="/home/mrrobot/Загрузки/test/tlabs/target/surefire/surefirebooter-20250912140719397_3.jar"/>
+    <property name="surefire.real.class.path" value="/home/mrrobot/Загрузки/test/tlabs/target/surefire/surefirebooter-20250912141414864_3.jar"/>
     <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
     <property name="java.runtime.version" value="21.0.7+6"/>
     <property name="user.name" value="mrrobot"/>
@@ -56,10 +56,10 @@
     <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
     <property name="java.class.version" value="65.0"/>
   </properties>
-  <testcase name="testDisplayErrorShowsMessageAndClearsResult" classname="ru.miet.testing.CalculatorGUITest" time="0.14"/>
-  <testcase name="testMultiplyButtonClickCallsListener" classname="ru.miet.testing.CalculatorGUITest" time="0.071"/>
-  <testcase name="testPrintResultShowsResultAndClearsError" classname="ru.miet.testing.CalculatorGUITest" time="0.041"/>
-  <testcase name="testMinusButtonClickCallsListener" classname="ru.miet.testing.CalculatorGUITest" time="0.07"/>
-  <testcase name="testDivideButtonClickCallsListener" classname="ru.miet.testing.CalculatorGUITest" time="0.074"/>
-  <testcase name="testPlusButtonClickCallsListener" classname="ru.miet.testing.CalculatorGUITest" time="0.079"/>
+  <testcase name="testDisplayErrorShowsMessageAndClearsResult" classname="ru.miet.testing.CalculatorGUITest" time="0.004"/>
+  <testcase name="testMultiplyButtonClickCallsListener" classname="ru.miet.testing.CalculatorGUITest" time="0.072"/>
+  <testcase name="testPrintResultShowsResultAndClearsError" classname="ru.miet.testing.CalculatorGUITest" time="0.009"/>
+  <testcase name="testMinusButtonClickCallsListener" classname="ru.miet.testing.CalculatorGUITest" time="0.074"/>
+  <testcase name="testDivideButtonClickCallsListener" classname="ru.miet.testing.CalculatorGUITest" time="0.076"/>
+  <testcase name="testPlusButtonClickCallsListener" classname="ru.miet.testing.CalculatorGUITest" time="0.075"/>
 </testsuite>
