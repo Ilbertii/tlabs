@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="ru"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CalculatorGUI.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">calculator</a> &gt; <a href="index.source.html" class="el_package">ru.miet.testing</a> &gt; <span class="el_source">CalculatorGUI.java</span></div><h1>CalculatorGUI.java</h1><pre class="source lang-java linenums">package ru.miet.testing;
+
+import javax.swing.*;
+import java.awt.*;
+import java.awt.event.ActionListener;
+
+public class CalculatorGUI implements CalculatorView {
+    private JFrame frame;
+    private JTextField firstNumberField;
+    private JTextField secondNumberField;
+    private JTextField resultField;
+    private JLabel errorLabel;
+    
+    // Явное хранение ссылок на кнопки для упрощения тестирования
+    private JButton plusButton;
+    private JButton minusButton;
+    private JButton multiplyButton;
+    private JButton divideButton;
+
+<span class="fc" id="L20">    public CalculatorGUI() {</span>
+<span class="fc" id="L21">        createGUI();</span>
+<span class="fc" id="L22">    }</span>
+
+    private void createGUI() {
+<span class="fc" id="L25">        frame = new JFrame(&quot;Calculator&quot;);</span>
+<span class="fc" id="L26">        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);</span>
+<span class="fc" id="L27">        frame.setSize(400, 300);</span>
+<span class="fc" id="L28">        frame.setLayout(new GridLayout(5, 2, 10, 10));</span>
+
+        // Input fields
+<span class="fc" id="L31">        frame.add(new JLabel(&quot;First number:&quot;));</span>
+<span class="fc" id="L32">        firstNumberField = new JTextField();</span>
+<span class="fc" id="L33">        frame.add(firstNumberField);</span>
+
+<span class="fc" id="L35">        frame.add(new JLabel(&quot;Second number:&quot;));</span>
+<span class="fc" id="L36">        secondNumberField = new JTextField();</span>
+<span class="fc" id="L37">        frame.add(secondNumberField);</span>
+
+        // Buttons
+<span class="fc" id="L40">        plusButton = new JButton(&quot;+&quot;);</span>
+<span class="fc" id="L41">        minusButton = new JButton(&quot;-&quot;);</span>
+<span class="fc" id="L42">        multiplyButton = new JButton(&quot;*&quot;);</span>
+<span class="fc" id="L43">        divideButton = new JButton(&quot;/&quot;);</span>
+
+        // Добавляем кнопки в отдельную панель для лучшего расположения
+<span class="fc" id="L46">        JPanel buttonPanel = new JPanel(new GridLayout(1, 4, 5, 5));</span>
+<span class="fc" id="L47">        buttonPanel.add(plusButton);</span>
+<span class="fc" id="L48">        buttonPanel.add(minusButton);</span>
+<span class="fc" id="L49">        buttonPanel.add(multiplyButton);</span>
+<span class="fc" id="L50">        buttonPanel.add(divideButton);</span>
+        
+<span class="fc" id="L52">        frame.add(new JLabel(&quot;Operations:&quot;));</span>
+<span class="fc" id="L53">        frame.add(buttonPanel);</span>
+
+        // Result field
+<span class="fc" id="L56">        frame.add(new JLabel(&quot;Result:&quot;));</span>
+<span class="fc" id="L57">        resultField = new JTextField();</span>
+<span class="fc" id="L58">        resultField.setEditable(false);</span>
+<span class="fc" id="L59">        frame.add(resultField);</span>
+
+        // Error label
+<span class="fc" id="L62">        errorLabel = new JLabel(&quot;&quot;);</span>
+<span class="fc" id="L63">        errorLabel.setForeground(Color.RED);</span>
+<span class="fc" id="L64">        frame.add(errorLabel);</span>
+<span class="fc" id="L65">        frame.add(new JLabel()); // Пустая ячейка для выравнивания</span>
+<span class="fc" id="L66">    }</span>
+
+    @Override
+    public void printResult(double result) {
+<span class="fc" id="L70">        resultField.setText(String.valueOf(result));</span>
+<span class="fc" id="L71">        errorLabel.setText(&quot;&quot;);</span>
+<span class="fc" id="L72">    }</span>
+
+    @Override
+    public void displayError(String message) {
+<span class="fc" id="L76">        errorLabel.setText(message);</span>
+<span class="fc" id="L77">        resultField.setText(&quot;&quot;);</span>
+<span class="fc" id="L78">    }</span>
+
+    @Override
+    public String getFirstArgumentAsString() {
+<span class="fc" id="L82">        return firstNumberField.getText().trim();</span>
+    }
+
+    @Override
+    public String getSecondArgumentAsString() {
+<span class="fc" id="L87">        return secondNumberField.getText().trim();</span>
+    }
+
+    // Упрощенные методы установки слушателей
+    public void setPlusButtonListener(ActionListener listener) {
+<span class="fc" id="L92">        plusButton.addActionListener(listener);</span>
+<span class="fc" id="L93">    }</span>
+
+    public void setMinusButtonListener(ActionListener listener) {
+<span class="fc" id="L96">        minusButton.addActionListener(listener);</span>
+<span class="fc" id="L97">    }</span>
+
+    public void setMultiplyButtonListener(ActionListener listener) {
+<span class="fc" id="L100">        multiplyButton.addActionListener(listener);</span>
+<span class="fc" id="L101">    }</span>
+
+    public void setDivideButtonListener(ActionListener listener) {
+<span class="fc" id="L104">        divideButton.addActionListener(listener);</span>
+<span class="fc" id="L105">    }</span>
+
+    // Геттеры для тестирования
+    public JButton getPlusButton() {
+<span class="fc" id="L109">        return plusButton;</span>
+    }
+
+    public JButton getMinusButton() {
+<span class="fc" id="L113">        return minusButton;</span>
+    }
+
+    public JButton getMultiplyButton() {
+<span class="fc" id="L117">        return multiplyButton;</span>
+    }
+
+    public JButton getDivideButton() {
+<span class="fc" id="L121">        return divideButton;</span>
+    }
+
+    public JTextField getResultField() {
+<span class="fc" id="L125">        return resultField;</span>
+    }
+
+    public JLabel getErrorLabel() {
+<span class="fc" id="L129">        return errorLabel;</span>
+    }
+
+    public void show() {
+<span class="nc" id="L133">        frame.setVisible(true);</span>
+<span class="nc" id="L134">    }</span>
+    public JTextField getFirstNumberField() {
+<span class="fc" id="L136">    return firstNumberField;</span>
+    }
+
+    public JTextField getSecondNumberField() {
+<span class="fc" id="L140">    return secondNumberField;</span>
+    }
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.10.202304240956</span></div></body></html>

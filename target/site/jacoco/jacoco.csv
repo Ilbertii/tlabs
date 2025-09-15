@@ -1,0 +1,5 @@
+GROUP,PACKAGE,CLASS,INSTRUCTION_MISSED,INSTRUCTION_COVERED,BRANCH_MISSED,BRANCH_COVERED,LINE_MISSED,LINE_COVERED,COMPLEXITY_MISSED,COMPLEXITY_COVERED,METHOD_MISSED,METHOD_COVERED
+calculator,ru.miet.testing,CalculatorGUI,5,256,0,0,2,57,1,18,1,18
+calculator,ru.miet.testing,CalculatorPresenterImpl,7,102,1,8,2,35,1,11,0,6
+calculator,ru.miet.testing,CalculatorImpl,0,29,0,2,0,7,0,6,0,5
+calculator,ru.miet.testing,Main,46,0,0,0,11,0,7,0,7,0
